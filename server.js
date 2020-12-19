@@ -1,12 +1,9 @@
-const handler = require('serve-handler');
-const http = require('http');
+const express = require('express');
 
-const server = http.createServer((request, response) => {
-  return handler(request, response, {
-    "public": "public"
-  });
-})
+const app = express();
 
-server.listen(3000, () => {
-  console.log('Running at http://localhost:3000');
-});
+app.use(express.static('public'))
+
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));

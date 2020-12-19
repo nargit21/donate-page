@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/nargit21/donate-page#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "serve-handler": "^6.1.3"
   }
 }
